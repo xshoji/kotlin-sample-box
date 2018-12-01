@@ -17,13 +17,15 @@ import java.util.concurrent.ConcurrentMap
 @RequestMapping("/comment")
 class SpringBootMultiModuleApplication {
 
-    @get:RequestMapping(value = "/", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
+    @get:RequestMapping("/", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
     @get:ResponseStatus(HttpStatus.OK)
     internal val all: ConcurrentMap<String, MutableList<Comment>> = ConcurrentHashMap()
 
-    inner class Comment(val createdOn: Date, val user: String, val message: String)
+    data class Comment(val createdOn: Date, val user: String, val message: String)
 
-    @RequestMapping(value = "/{user}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
+    // > Annotations - Kotlin Programming Language
+    // > http://kotlinlang.org/docs/reference/annotations.html#arrays-as-annotation-parameters
+    @RequestMapping("/{user}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
     @ResponseStatus(HttpStatus.OK)
     internal operator fun get(@PathVariable user: String): List<Comment> {
         return all.getOrDefault(user, ArrayList())
@@ -32,7 +34,7 @@ class SpringBootMultiModuleApplication {
     /**
      * - [【Spring Boot入門（5）】RestAPI(POST)を作ってみる | なんちゃってSEの備忘録](https://poppingcarp.com/spring-boot_intro_rest_post/)
      */
-    @RequestMapping(value = "/{user}/{message}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
+    @RequestMapping("/{user}/{message}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
     @ResponseStatus(HttpStatus.CREATED)
     internal fun add(@PathVariable user: String, @PathVariable message: String): Comment {
         var comments = all.getOrDefault(user, ArrayList())
