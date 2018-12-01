@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.xshoji.janken</groupId>
+    <artifactId>janken-root</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>janken-root</name>
+    <description>Janken app by kotlin</description>
+
+    <modules>
+        <module>janken-base</module>
+        <module>janken-main</module>
+    </modules>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>1.2.31</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-compiler</artifactId>
+            <version>1.2.31</version>
+        </dependency>
+    </dependencies>
+
+</project>
+
