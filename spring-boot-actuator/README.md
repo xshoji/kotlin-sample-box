@@ -5,7 +5,7 @@
 $ mvn clean package
 
 // Boot application
-$ java -jar webapi/target/spring-boot-actuator-webapi-0.0.1-SNAPSHOT.jar
+$ java -jar target/spring-boot-actuator-webapi-2.0.0.RELEASE.jar
 
 // Comment
 //// Add
