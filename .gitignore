@@ -24,7 +24,6 @@ hs_err_pid*
 
 ### Common ###
 target
-!.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
 .apt_generated
