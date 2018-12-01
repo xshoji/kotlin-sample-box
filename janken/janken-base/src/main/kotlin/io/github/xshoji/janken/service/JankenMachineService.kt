@@ -16,7 +16,7 @@ class JankenMachineService(var user: Player, var npc: Player) {
         println("npc hand : ${npc.hand}")
         println("")
         println("== [ janken result ] =======")
-        var result = if (user.hand == npc.hand) {
+        if (user.hand == npc.hand) {
             println("あいこ")
         } else if (user.hand == Hand.Gu && npc.hand == Hand.Pa) {
             println("${user.name}の負け！")
