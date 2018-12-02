@@ -5,6 +5,7 @@
 
 	<artifactId>spring-boot-actuator-webapi</artifactId>
 	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-actuator-webapi</name>
 	<description>Demo project for Spring Boot [webapi] </description>
 
