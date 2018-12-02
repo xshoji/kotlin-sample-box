@@ -82,6 +82,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!--Spring Boot Maven Plugin – Usage-->
+				<!--https://docs.spring.io/spring-boot/docs/1.5.17.RELEASE/maven-plugin/usage.html-->
+				<!--maven - Kotlin Multi-module Project Dependency is Unresolved in test Lifecycle - Stack Overflow-->
+				<!--https://stackoverflow.com/questions/48951653/kotlin-multi-module-project-dependency-is-unresolved-in-test-lifecycle				<configuration>-->
 				<configuration>
 					<layout>MODULE</layout>
 				</configuration>
