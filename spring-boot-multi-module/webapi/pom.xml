@@ -21,4 +21,17 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
+
+	<!-- > kotlin-spring-realworld-example-app/pom.xml at master · gothinkster/kotlin-spring-realworld-example-app -->
+	<!-- > https://github.com/gothinkster/kotlin-spring-realworld-example-app/blob/master/pom.xml -->
+	<build>
+		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
