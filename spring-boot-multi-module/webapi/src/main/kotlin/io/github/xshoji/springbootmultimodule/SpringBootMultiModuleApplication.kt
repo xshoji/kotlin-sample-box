@@ -18,7 +18,7 @@ class SpringBootMultiModuleApplication {
     /**
      * - [【Spring Boot入門（5）】RestAPI(POST)を作ってみる | なんちゃってSEの備忘録](https://poppingcarp.com/spring-boot_intro_rest_post/)
      */
-    @RequestMapping(value = "/{userName}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
+    @RequestMapping("/{userName}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
     @ResponseStatus(HttpStatus.CREATED)
     internal operator fun get(@PathVariable userName: String): MutableList<String>? {
         return commentRepository?.get(userName)
@@ -27,7 +27,7 @@ class SpringBootMultiModuleApplication {
     /**
      * - [【Spring Boot入門（5）】RestAPI(POST)を作ってみる | なんちゃってSEの備忘録](https://poppingcarp.com/spring-boot_intro_rest_post/)
      */
-    @RequestMapping(value = "/{userName}/{message}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
+    @RequestMapping("/{userName}/{message}", method = arrayOf(RequestMethod.GET), produces = arrayOf("application/json"))
     @ResponseStatus(HttpStatus.CREATED)
     internal fun add(@PathVariable userName: String, @PathVariable message: String): String {
         commentRepository?.add(userName, message)
